@@ -41,8 +41,8 @@ The project is designed for **Python 3.8+**. We recommend using a virtual enviro
 
 ```bash
 # Clone the repository
-git clone [https://github.com/yourusername/mre-mrpe.git](https://github.com/yourusername/mre-mrpe.git)
-cd mre-mrpe
+git clone [https://github.com/srishti-rao/breast-cancer-research.git](https://github.com/srishti-rao/breast-cancer-research.git)
+cd breast-cancer-research
 
 # Create virtual environment
 python -m venv venv
