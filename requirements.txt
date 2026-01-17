@@ -1,0 +1,16 @@
+torch
+torchvision
+timm
+numpy
+pandas
+grad-cam
+statsmodels
+opencv-python-headless
+gradio
+pillow
+opencv-python
+scikit-learn
+tensorboard
+matplotlib
+seaborn
+torchcam
