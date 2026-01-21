@@ -1,12 +1,12 @@
-torch
-torchvision
+torch>=2.1.0
+torchvision>=0.16.0
 timm
 numpy
 pandas
 grad-cam
 statsmodels
 opencv-python-headless
-gradio
+gradio>=4.0.0
 pillow
 opencv-python
 scikit-learn
