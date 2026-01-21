@@ -1,5 +1,3 @@
-# CELL 28 : Gradio Application
-
 import os
 import time
 import warnings
