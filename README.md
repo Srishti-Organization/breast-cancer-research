@@ -1,52 +1,28 @@
-# MRE-MRPE: Multi-Resolution Ensemble Framework for Breast Cancer Histopathology
+# Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification
 
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![Gradio](https://img.shields.io/badge/Gradio-726E88?style=for-the-badge&logo=gradio&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.FAKE_ID_REPLACE_ME.svg)](https://doi.org/10.5281/zenodo.FAKE_ID_REPLACE_ME)
 
-This repository contains the official implementation of the **MRE-MRPE framework**, a deep learning approach for classifying breast cancer histopathology images into four classes: **Benign, InSitu, Invasive, and Normal**. 
+## 📌 Context
+This repository contains the source code, experimental pipeline, and deployment tools for the manuscript **"Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification"**, submitted to *The Visual Computer* (2026).
 
-This work accompanies the paper:
-> **"MRE-MRPE: A Multi-Resolution Ensemble Framework with Speed-Accuracy Weighting and Quantitative Interpretability for Breast Cancer Histopathology"** > *Srishti Rao Punaroor, Tanmoy Hazra, and Rahul Dixit* > *Department of Artificial Intelligence, Sardar Vallabhbhai National Institute of Technology, India*
+It implements the **MRE-MRPE framework** (Multi-Resolution Ensemble with Model-Rate Performance Ensemble weighting) and the quantitative XAI analysis described in the paper.
 
----
+## 💻 Hardware Optimization Note
+**Platform:** Apple Silicon (M4 Chip)
+**Backend:** Metal Performance Shaders (MPS)
 
-## 📌 Project Overview
+> **Note for Reproducibility:** The latency benchmarks and speed-accuracy trade-offs (FP16 vs. FP32) detailed in the manuscript were conducted on an Apple M4 device using the `mps` accelerator. While this code is fully compatible with NVIDIA GPUs (`cuda`) and CPUs, performance metrics will vary on different hardware.
 
-Accurately classifying breast cancer from Whole Slide Images (WSIs) is challenging due to the heterogeneous nature of tissue features at different magnifications. This framework addresses this challenge through:
+## 📂 Repository Structure
+* `notebook.ipynb`: The complete research pipeline, including data preprocessing, model training (EfficientNet, MobileNet, ShuffleNet), MRPE weight calculation, and statistical analysis.
+* `app.py`: The deployable **Gradio** web interface ("Glass Box" tool) for clinical decision support.
+* `requirements.txt`: List of dependencies.
+* `ground_truth_regions.csv`: Proxy ground truth coordinates for XAI IoU validation.
+* `pathologist_scores.csv`: Simulated pathologist scoring data for correlation analysis.
 
-1.  **Multi-Resolution Training**: Training lightweight CNNs (**MobileNetV3**, **EfficientNet-B0**, **ShuffleNetV2**) on patches extracted at three distinctive resolutions ($256^2, 512^2, 1024^2$).
-2.  **Ensemble Learning**: Implementing a **Model-Rate Performance Ensemble (MRPE)** to balance classification accuracy against inference latency.
-3.  **Explainable AI (XAI)**: Utilizing **Grad-CAM** to generate heatmaps and quantitatively assessing them against proxy ground truth regions.
-4.  **Hardware Optimization**: Benchmarking **FP16 (Half-Precision)** vs. **FP32** performance specifically on Apple Silicon (MPS).
+## 🚀 Usage
 
----
-
-## 📊 Dataset
-
-The model is trained and evaluated on the **ICIAR 2018 BACH (BreAst Cancer Histology) Dataset**.
-
-* **Classes**: Normal, Benign, InSitu, Invasive.
-* **Source**: [ICIAR 2018 Challenge](https://iciar2018-challenge.grand-challenge.org/)
-
-> **⚠️ Important**: Due to licensing, the dataset is not included in this repository. 
-> 1. Download the dataset from the official challenge website.
-> 2. Place the images in: `data/raw/bach/ICIAR2018_BACH_Challenge/Photos`
-
----
-
-## 🛠️ Installation & Requirements
-
-The project is designed for **Python 3.8+**. We recommend using a virtual environment.
-
+### 1. Installation
+Ensure you have Python 3.9+ installed.
 ```bash
-# Clone the repository
-git clone [https://github.com/srishti-rao/breast-cancer-research.git](https://github.com/srishti-rao/breast-cancer-research.git)
-cd breast-cancer-research
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install torch torchvision timm numpy pandas matplotlib seaborn scikit-learn Pillow gradio pytorch-grad-cam statsmodels
+pip install -r requirements.txt
