@@ -5,6 +5,8 @@
 ## 📌 Context
 This repository contains the source code, experimental pipeline, and deployment tools for the manuscript **"Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification"**, submitted to *The Visual Computer* (2026).
 
+If you utilize this code, data, or the MRE-MRPE framework in your research, **please cite the manuscript** (details in CITATION.cff).
+
 It implements the **MRE-MRPE framework** (Multi-Resolution Ensemble with Model-Rate Performance Ensemble weighting) and the quantitative XAI analysis described in the paper.
 
 ## 💻 Hardware Optimization Note
