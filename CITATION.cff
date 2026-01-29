@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+authors:
+  - family-names: "Punaroor"
+    given-names: "Srishti Rao"
+  - family-names: "Hazra"
+    given-names: "Tanmoy"
+  - family-names: "Dixit"
+    given-names: "Rahul"
+title: "Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification"
+version: 1.0.0
+date-released: 2026-01-29
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Punaroor"
+      given-names: "Srishti Rao"
+    - family-names: "Hazra"
+      given-names: "Tanmoy"
+    - family-names: "Dixit"
+      given-names: "Rahul"
+  journal: "Submitted to The Visual Computer"
+  title: "Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification"
+  year: 2026
