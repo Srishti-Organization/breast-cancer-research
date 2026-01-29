@@ -1,6 +1,6 @@
 # Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.FAKE_ID_REPLACE_ME.svg)](https://doi.org/10.5281/zenodo.FAKE_ID_REPLACE_ME)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18413089.svg)](https://doi.org/10.5281/zenodo.18413089)
 
 ## 📌 Context
 This repository contains the source code, experimental pipeline, and deployment tools for the manuscript **"Multi-Resolution Ensemble Learning with Quantitative Interpretability for Enhanced Breast Cancer Histopathology Classification"**, submitted to *The Visual Computer* (2026).
